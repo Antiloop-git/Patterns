@@ -22,3 +22,4 @@ class NotFound404:
 class Contacts:
     def __call__(self, request):
         return '200 OK', 'contacts'
+

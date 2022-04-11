@@ -17,6 +17,7 @@ def report_data_of_run(request):
 
 fronts = [secret_front, other_front, report_data_of_run]
 
+
 routes = {
     '/': Index(),
     '/about/': About(),
