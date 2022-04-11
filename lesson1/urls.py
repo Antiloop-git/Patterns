@@ -1,5 +1,5 @@
-from datetime import date
-from views import Index, About
+from datetime import date, datetime
+from views import Index, About, Contacts
 
 
 # front controller
@@ -11,9 +11,14 @@ def other_front(request):
     request['key'] = 'key'
 
 
-fronts = [secret_front, other_front]
+def report_data_of_run(request):
+    request['var_report_data_of_run'] = datetime.now()
+
+
+fronts = [secret_front, other_front, report_data_of_run]
 
 routes = {
     '/': Index(),
     '/about/': About(),
+    '/contacts/': Contacts(),
 }
