@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+Создание курса
+{% endblock %}
+{% block style %}
+	{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+
+<script type="text/javascript">
+function setLocation(curLoc){
+if (history.pushState) {
+  window.history.pushState("object or string", "Title", "/new-url");
+} else {
+  document.location.href = "/new-url";
+}
+</script>
+
+
+<h1>Создание категории</h1>
+
+<form method="post" onsubmit="document.location.replace('/');return true">
+
+    <input type="text" name="name" placeholder="Название">
+    <button type="submit" onclick="setLocation('/')" >Сохранить и вернуться на главную</button>
+
+</form>
+{% endblock %}
+
